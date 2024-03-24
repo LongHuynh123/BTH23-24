@@ -29,7 +29,7 @@
         .card {
             margin: 120px auto;
             width: 300px;
-            height: 450pxpx;
+            height: 450px;
             background: rgb(94, 128, 128);
             padding: 20px;
             border-radius: 15px;
@@ -45,7 +45,6 @@
             top: 15px;
             cursor: pointer;
         }
-
         .card_cart {
             left: unset;
 
@@ -53,14 +52,17 @@
         }
 
         .card_img {
-            width: 90%;
+            width: 80%;
+            height: 50%;
             transition: 0.5s;
         }
 
         .card_img img {
-            width: 100%;
-            height: 100%;
+            width:80%;
+            height: 70%;
             object-fit: cover;
+            float:right;
+            transition: 0.5s;
         }
 
         .card_title,
@@ -70,9 +72,8 @@
             text-align: center;
             transition: 0.5s;
         }
-
         .card_title {
-            color: var(--primary-color);
+            color: var(-primary-color);
         }
 
         .card_size,
@@ -106,16 +107,21 @@
         .card_color_red {
             background: red;
         }
-
+        .buy{
+            background-color: green;
+        }
+        .basket{
+            background-color: red;
+        }
         .card_color_yellow {
             background: rgb(202, 232, 9);
         }
 
         .card_action button {
-            background: var(--primary-color);
+            background: var(-primary-color);
             border: none;
             outline: none;
-            color: aliceblue;
+            color: black;
             padding: 10px 20px;
             border-radius: 5px;
             font-weight: bold;
@@ -129,15 +135,15 @@
         }
 
         .card:hover .card_img {
-            transform: translateY(-90px) rotate(-20deg);
+            transform: translateY(-110px) rotate(-20deg);
         }
 
         .card:hover .card_title {
-            transform: translate(-35px, -70px);
+            transform: translate(-62px, -90px);
         }
 
         .card:hover .card_price {
-            transform: translate(-117px, -72px);
+            transform: translate(-117px, -92px);
         }
 
         .card_size {
@@ -145,7 +151,10 @@
             visibility: hidden;
             opacity: 0;
         }
-
+        .card_size span:hover {
+            background-color: black;
+            color:white;
+        }
         .card_size,
         .card_color,
         .card_action {
@@ -165,9 +174,6 @@
         .card:hover .card_size {
             margin-top: 30px;
         }
-        .card_size{
-            margin-top: 0;
-        }
     </style>
 </head>
 
@@ -183,9 +189,9 @@
             <img src="./images.jpg" alt="">
         </div>
         <div class="card_title">
-            Long Huỳnh
+            Huynh Gia Long 
         </div>
-        <div class="card_price">150</div>
+        <div class="card_price"> 120$</div>
         <div class="card_size">
             <h3>size</h3>
             <span>6</span>
@@ -200,8 +206,8 @@
         </div>
         <span class="card_color_yellow"></span>
         <div class="card_action">
-            <button>mua </button>
-            <button> giỏ</button>
+            <button class="buy">Mua </button>
+            <button class="basket">Giỏ</button>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/boxicons.min.js">
